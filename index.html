@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catatanku 2.0</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #87CEFA, #FFD700);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      color: #0077cc;
+      margin: 0;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #333;
+      margin-left: 20px;
+    }
+    nav button:hover {
+      color: #0077cc;
+    }
+    main {
+      flex: 1;
+      display: none;
+      padding: 30px;
+      animation: fadeIn 0.4s ease;
+      max-width: 700px;
+      margin: auto;
+    }
+    main.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    textarea, input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      outline: none;
+    }
+    textarea:focus, input:focus {
+      border-color: #0077cc;
+    }
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    button.action {
+      flex: 1;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: white;
